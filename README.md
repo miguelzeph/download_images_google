@@ -14,17 +14,17 @@ This project uses Selenium to extract images from Google. The purpose of this sm
 
 1. Clone this repository:
 
-    ```bash
-    git clone git@github.com:miguelzeph/download_images_google.git
-    cd download_images_google
-    ```
+```bash
+git clone git@github.com:miguelzeph/download_images_google.git
+cd download_images_google
+```
 
 2. Create and activate a virtual environment with Python 3.7:
 
-    ```bash
-    virtualenv -p python3.7 venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
+```bash
+virtualenv -p python3.7 venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
 
 3. Install the dependencies:
 
@@ -38,39 +38,31 @@ This project uses Selenium to extract images from Google. The purpose of this sm
 
     `P.S. Google has changed the image class for its images, beware the field **google.image_class**  might have to change one day.`
 
-    ```yaml
-    logger:
-    level: INFO
+```yaml
+logger:
+level: INFO
 
-    browser_driver:
-    path: driver_Chromium/chromedriver
-    download_image_path: images
+browser_driver:
+path: driver_Chromium/chromedriver
+download_image_path: images
 
-    google:
-    image_url: https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&
-    # For reason of security, google always change
-    # the image_class, so beware that this value
-    # may have changed when you are executing the
-    # script.
-    image_class: YQ4gaf
-
-    usr_agent:
-    user-agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
-    accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-    accept-charset: "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
-    accept-encoding: "none"
-    accept-language: "en-US,en;q=0.8"
-    connection: "keep-alive"
-    ```
+google:
+image_url: https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&
+# For reason of security, google always change
+# the image_class, so beware that this value
+# may have changed when you are executing the
+# script.
+image_class: YQ4gaf
+```
 
     Then, source the configuration file:
 
-    ```bash
-    source KLEIN_CONFIG=<your_config.yml_path>
-    ```
+```bash
+source KLEIN_CONFIG=<your_config.yml_path>
+```
 ### Downloading the Selenium WebDriver
 
-To use Selenium, you need the driver corresponding to the browser you want to automate. Here are the steps to download the Chrome driver, for instance:
+To use Selenium, you need the driver corresponding to the browser you want to automate. Here are the steps to download the Chromium driver (this script was tested with the Chromium version **126.0.6478.182**):
 
 1. **Determine your Chrome version**:
     - Open Chrome and go to `chrome://settings/help` to see the browser version.
@@ -86,10 +78,10 @@ To use Selenium, you need the driver corresponding to the browser you want to au
 
 3. **Add ChromeDriver to PATH**:
     - Extract the ChromeDriver and move it to a directory (make sure the name is **chromedriver**):
-    ```bash
-    # Move it to the directory
-    src/driver_Chormium/chromedriver
-    ```
+```bash
+# Move it to the directory
+src/driver_Chormium/chromedriver
+```
 
     `P.S. In case you want to use other driver you can change the folder name and file name in the config.yml explaned above.`
 
@@ -97,15 +89,25 @@ To use Selenium, you need the driver corresponding to the browser you want to au
 
 1. Ensure the virtual environment is activated:
 
-    ```bash
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
+```bash
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
 
-2. Run the main script:
+2. Move to folder src and setup the env var.
 
-    ```bash
-    python main.py
-    ```
+```bash
+# Move to src
+cd ./src
+
+# Configure env var
+source KLEIN_CONFIG=<your_config.yml_path>
+```
+
+3. Run the main script:
+
+```bash
+python main.py
+```
 
 ### Notes
 
