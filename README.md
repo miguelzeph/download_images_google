@@ -15,7 +15,7 @@ This project uses Selenium to extract images from Google. The purpose of this sm
 1. Clone this repository:
 
     ```bash
-    git clone <xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx>
+    git clone git@github.com:miguelzeph/download_images_google.git
     cd download_images_google
     ```
 
@@ -36,9 +36,31 @@ This project uses Selenium to extract images from Google. The purpose of this sm
 
     You can change the `config.yml` file and add the necessary environment variables.
 
+    `P.S. Google has changed the image class for its images, beware the field **google.image_class**  might have to change one day.`
+
     ```yaml
-    path: driver_Chormium/chromedriver
+    logger:
+    level: INFO
+
+    browser_driver:
+    path: driver_Chromium/chromedriver
     download_image_path: images
+
+    google:
+    image_url: https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&
+    # For reason of security, google always change
+    # the image_class, so beware that this value
+    # may have changed when you are executing the
+    # script.
+    image_class: YQ4gaf
+
+    usr_agent:
+    user-agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+    accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    accept-charset: "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
+    accept-encoding: "none"
+    accept-language: "en-US,en;q=0.8"
+    connection: "keep-alive"
     ```
 
     Then, source the configuration file:
