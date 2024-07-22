@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import urllib.request
 import time
 from settings import (
-    DRIVER_PATH,
     DOWNLOAD_IMAGE_PATH,
     GOOGLE_IMAGE_CLASS,
     GOOGLE_IMAGE_URL,

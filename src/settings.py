@@ -1,5 +1,10 @@
-from klein_config import get_config
+import os
 import logging
+
+from klein_config import get_config
+
+# Don't need to execute export KLEIN_CONFIG=...
+# os.environ["KLEIN_CONFIG"]="../config.yml"
 
 config = get_config()
 
@@ -11,18 +16,7 @@ DOWNLOAD_IMAGE_PATH = config.get("browser_driver.download_image_path")
 GOOGLE_IMAGE_URL = config.get("google.image_url")
 GOOGLE_IMAGE_CLASS = config.get("google.image_class")
 
-####### User Agent ########
-usr_agent = {
-    "User-Agent": config.get("usr_agent.user-agent"),
-    "Accept": config.get("usr_agent.accept"),
-    "Accept-Charset": config.get("usr_agent.accept-charset"),
-    "Accept-Encoding": config.get("usr_agent.accept-encoding"),
-    "Accept-Language": config.get("usr_agent.accept-language"),
-    "Connection": config.get("usr_agent.connection")
-}
-
 ######### Logger ##########
-
 logging.basicConfig(
     level=config.get("logger.level"),
     handlers=[

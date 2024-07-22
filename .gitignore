@@ -1,5 +1,18 @@
-# Byte-compiled
+#################### Python ###################
 __pycache__/
+*.pyc
+
+# Environment
+.env
+.venv/
+env
+venv
+
+# Distribution
+build/
+dist/
+*.egg-info/
+###############################################
 
 # Images Downloaded
 src/images/
