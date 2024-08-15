@@ -113,3 +113,7 @@ python main.py
 
 - Ensure that the ChromeDriver is in the PATH or provide the path directly in the Selenium code.
 - This project has been tested with Python 3.7. Ensuring compatibility with other Python versions may require additional adjustments.
+
+## Authors
+
+- Miguel Angelo do Amaral Junior: Data Engineer
