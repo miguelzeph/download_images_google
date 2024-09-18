@@ -72,7 +72,7 @@ To use Selenium, you need the driver corresponding to the browser you want to au
     - **For Chrome versions 115 and above**:
         - Use the following link to find the appropriate driver version: [ChromeDriver for versions 115+](https://googlechromelabs.github.io/chrome-for-testing/#stable).
         - Make sure to install the ChromeDriver version, not Chrome itself.
-        - Tips: usually the link is something like https://storage.googleapis.com/chrome-for-testing-public/**129.0.6668.58**/linux64/chromedriver-linux64.zip so just check your google version and change the **version value** for that on the URL.
+        - Tips: usually the link is something like https://storage.googleapis.com/chrome-for-testing-public/129.0.6668.58/linux64/chromedriver-linux64.zip so just check your google version and change the **version value** for that on the URL and do the download.
 
     - **For Chrome versions below 115**:
         - Use this link to find the appropriate driver version: [ChromeDriver for versions below 115](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/).
@@ -84,7 +84,7 @@ To use Selenium, you need the driver corresponding to the browser you want to au
 src/driver_Chormium/chromedriver
 ```
 
-    `P.S. In case you want to use other driver you can change the folder name and file name in the config.yml explaned above.`
+`P.S. In case you want to use other driver you can change the folder name and file name in the config.yml explaned above.`
 
 ### Running the Project
 
